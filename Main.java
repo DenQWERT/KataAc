@@ -42,6 +42,18 @@ public class Main {
                 System.exit(0);
             }
         }
+
+        //  ===== -  Добавлена обработка некорректных операторов 14.03.2023 по замечанию Ментора.==============
+        if (Deistvie.replaceAll("[*,+, //,-]", "" ).length() >= 1) {
+            try{
+                throw new IOException();
+            }
+            catch (IOException e) {
+                System.out.println("throws Exception //т.к. формат математической операции не удовлетворяет заданию - допустим только один из операторов: (+, -, /, *) ");//  Выход с ошибкой
+                System.exit(0);
+            }
+        }
+
         index_deistvie = Stroka.indexOf(Deistvie);
         ////System.out.print("   Место действия " + index_deistvie);
 
