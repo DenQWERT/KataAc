@@ -2,10 +2,6 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
-
-    public static void main(String[] args)
-    {
-    }
     public static String calc(String input) {
         String[] RIM = {"I","II","III",	"IV","V","VI","VII","VIII",	"IX","X","XI","XII",
                 "XIII",	"XIV","XV","XVI","XVII","XVIII","XIX","XX",	"XXI","XXII","XXIII","XXIV",
@@ -162,8 +158,8 @@ public class Main {
         return RES;
     }
 
-    static
-    {
+    public static void main(String[] args)    {
+        // ========  Ввод перенесен в Main по просьбе Ментора 15.03.2023г. ===============
         Scanner in = new Scanner(System.in);
         int n = 100;
         while(n>20) {
@@ -171,12 +167,7 @@ public class Main {
             String user_input_stroka = in.nextLine();  // Вводим строку
             System.out.println("Output: " + calc(user_input_stroka));
         }
-        //System.out.println("15");
-        //System.out.println(calc(" 3 + 2"));
-        //System.out.println(calc(" 9 +  5"));
-        //System.out.println(calc(" 9 + 15"));
-        //System.out.println(calc(" 9 + III5"));
-        //System.out.println(calc(" 9 +_ 5"));
+
     }
 
 
